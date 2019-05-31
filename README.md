@@ -23,4 +23,3 @@
 ## Demo
 
 ![demo](demo.gif)
-![demo](https://media.giphy.com/media/jQKQUJ8h5IFXGyE39C/giphy.gif)
