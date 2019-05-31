@@ -21,4 +21,4 @@
     To get a list of all registered users
     curl -X GET http://localhost:3001/users -H 'content-type: application/json' 
 
-    
+    ![](demo.gif)
