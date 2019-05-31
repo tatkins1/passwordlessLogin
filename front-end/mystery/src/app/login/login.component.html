@@ -1,0 +1,62 @@
+<section class="hero is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-4 is-offset-4">
+                <div *ngIf="numberScreen">
+                    <div class="box">
+                        <figure class="avatar">
+                            <img src="https://placehold.it/128x128">
+                        </figure>
+                        <p class="subtitle is-4">Login or Sign Up</p>
+                        <hr>
+                        <p>What's your mobile phone number?</p>
+                        <form>
+                            <div class="field">
+                                <br>
+                                <div class="control">
+                                    <input #phone id="phone_number" class="input is-large" type="tel"
+                                        placeholder="123 456 7890" autofocus="" maxlength="11">
+                                </div>
+                                <p class="help">You'll receive a text message with a one-time code that we'll use to
+                                    verify
+                                    your phone number.</p>
+                            </div>
+                            <br>
+                            <button (click)="sendNumber(phone.value)"
+                                class="button is-block is-info is-large is-fullwidth">Send
+                                code</button>
+                        </form>
+                    </div>
+                    <p class="has-text-grey">
+                        <a href="../">Need Help?</a>
+                    </p>
+                </div>
+                <div *ngIf="codeScreen">
+                    <div class="box">
+                        <figure class="avatar">
+                            <img src="https://placehold.it/128x128">
+                        </figure>
+                        <p class="subtitle is-4">Verification</p>
+                        <hr>
+                        <p>Please enter 4 digit verification code</p>
+                        <form>
+                            <div class="field">
+                                <br>
+                                <div class="control">
+                                    <input #code id="code" class="input is-large" type="tel" maxlength="4"
+                                        placeholder="0000" autofocus="">
+                                </div>
+                                <p class="help">Didn't receive a code? <a (click)="console.log('clicked')">Resend</a> </p>
+                            </div>
+                            <br>
+                            <button (click)="verifyCode(code.value)"
+                                class="button is-block is-info is-large is-fullwidth">Verify</button>
+                        </form>
+                    </div>
+
+                    <div *ngIf="codeStatus.length">{{codeStatus}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
