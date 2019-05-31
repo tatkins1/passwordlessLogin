@@ -20,6 +20,7 @@
 
     To get a list of all registered users
     curl -X GET http://localhost:3001/users -H 'content-type: application/json' 
+## Demo
 
-    ![demo](demo.gif)
-    ![demo](https://media.giphy.com/media/jQKQUJ8h5IFXGyE39C/giphy.gif)
+![demo](demo.gif)
+![demo](https://media.giphy.com/media/jQKQUJ8h5IFXGyE39C/giphy.gif)
